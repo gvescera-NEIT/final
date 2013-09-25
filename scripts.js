@@ -9,6 +9,7 @@ var link1 = document.getElementById("agreeLink1"),
 	agreeBox = document.getElementById("agreeScroll");
 	rad_agree = document.getElementById("agree");
 	rad_notagree = document.getElementById("notagree");
+	var continue_err = document.getElementById("continue_err");
 
 // Checks if link 1 is clicked	
 $(link1).click(function() {
@@ -35,10 +36,11 @@ $(btnContinue).click(function() {
 		{
 			alert("You must agree before you continue.");
 		}
+		
+		continue_err.innerHTML = "";
 	}
 	else
 	{
-		var continue_err = document.getElementById("continue_err");
 		continue_err.innerHTML = "*You must view both documents, and choose to accept or decline the terms and conditions.*";
 	}
 });
